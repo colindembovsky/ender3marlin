@@ -1,0 +1,38 @@
+  G21    ; (mm)
+  M149 C ; Units in Celsius
+Recv: 
+Filament settings: Disabled
+  M200 D1.75
+  M200 D0
+Steps per unit:
+  M92 X80.00 Y80.00 Z400.00 E104.73
+Maximum feedrates (units/s):
+  M203 X500.00 Y500.00 Z10.00 E50.00
+Maximum Acceleration (units/s2):
+  M201 X500 Y500 Z100 E5000
+Acceleration (units/s2): P<print_accel> R<retract_accel> T<travel_accel>
+  M204 P500.00 R1000.00 T500.00
+Advanced: Q<min_segment_time_us> S<min_feedrate> T<min_travel_feedrate> X<max_x_jerk> Y<max_y_jerk> Z<max_z_jerk> E<max_e_jerk>
+  M205 Q25000 S0.00 T0.00 X8.00 Y8.00 Z0.40 E5.00
+Home offset:
+  M206 X0.00 Y0.00 Z0.00
+Auto Bed Leveling:
+  M420 S0 Z10.00
+  G29 W I0 J0 Z0.26000
+  G29 W I1 J0 Z0.43250
+  G29 W I2 J0 Z0.69750
+  G29 W I0 J1 Z-0.18000
+  G29 W I1 J1 Z-0.03500
+  G29 W I2 J1 Z0.11000
+  G29 W I0 J2 Z-0.55250
+  G29 W I1 J2 Z-0.50500
+  G29 W I2 J2 Z-0.45500
+Material heatup parameters:
+  M145 S0 H200 B60 F0
+  M145 S1 H240 B100 F0
+PID settings:
+  M301 P22.20 I1.08 D114.00
+Z-Probe Offset (mm):
+  M851 Z-2.40
+Filament load/unload lengths:
+  M603 L125.00 U120.00
